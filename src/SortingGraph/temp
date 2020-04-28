@@ -1,0 +1,98 @@
+import './SortingGraph.css'
+import React from 'react';
+export default class SortingGraph extends React.Component{
+    constructor(props){
+        super(props);
+        this.state = {
+            array: [],
+        
+        };
+    }
+    componentDidMount(){
+        this.addValues();
+    }
+    addValues(){
+        const array = [];
+        for(let i = 0; i < 250;i++){
+            array.push(Math.floor(Math.random() * 850));
+        }
+        this.setState({array});        
+    }/*
+    listValues(){
+        
+        return(
+            <div className = "array-container">
+            {this.state.array.map((value,index) => (
+            <div className = "array-node" key = {index} style={{height: value +"px"}}>
+                
+            </div>
+        ))}</div>
+        );   
+    }*/
+    bubbleSort(){
+        var array = this.state.array;
+        const animations = [];
+        const swaps = [];
+        const barsTotal = document.getElementsByClassName('array-node');
+        var i,j;
+        for (i = 0;i < array.length-1;i++){
+          for (j = 0;j < array.length-1;j++){
+              if(array[j] > array[j+1]){
+                
+                var temp = array[j+1];
+                array[j+1] = array[j];
+                array[j] = temp; 
+                animations.push([ j , j+1 ,array[j],array[j+1]]);
+              }else{
+                /*animations.push([ j , j+1 ,array[j],array[j+1]]);*/
+              }
+          }
+        }
+        var x = array.length-1;
+        for(i = 0; i < animations.length;i++){
+            const [bar1,bar2,bar1Value,bar2Value] = animations[i];
+            const bar1Style = barsTotal[bar1].style;
+            const bar2Style = barsTotal[bar2].style;
+            
+            setTimeout(() => {
+                
+                setTimeout(() => {   
+                    bar1Style.height = bar1Value + 'px' ;
+                    bar2Style.height = bar2Value + 'px' ; 
+        
+                    bar1Style.backgroundColor = '#0052f5';
+                    bar2Style.backgroundColor = '#0052f5';
+                   
+                },  1)
+                bar1Style.backgroundColor = 'red';
+            
+      
+            }, i * 3)    
+        }
+       
+
+      }
+      
+    render(){
+        return(
+            <h1>
+                <button onClick={() => this.addValues()}>Generate List</button>
+                <button onClick={() => this.bubbleSort()}>BubbleSort</button>
+                <div className = "array-container">
+                {this.state.array.map((value,index) => (
+                    <div className = "array-node" key = {index} style={{height: value +"px"}}>
+                        
+                    </div>
+            ))}</div>
+        </h1>
+        ); 
+    };
+}
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+      currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
+  }
+  

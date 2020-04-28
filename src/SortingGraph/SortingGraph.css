@@ -1,0 +1,127 @@
+.SortingGraph {
+    background-color: #282c34;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: rgb(141, 45, 45);
+  }
+.array-container {
+    background-color: #282c34;
+    padding: 0px 0px;
+    height: 1000px;
+    margin: 20px;
+    display: inline-flex;
+    transform: rotate(180deg) scaleX(-1);
+    
+}
+.header-container {
+    background-color: black;
+    display: inline;
+
+}
+.sort-button {
+    background-color: black; /* Green */
+    border: 1px solid black;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Helvetica;
+    cursor: pointer;
+    
+}
+.sort-button :disabled {
+    background-color: black; /* Green */
+    border: 1px solid black;
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-family: Helvetica;
+    cursor: not-allowed;
+    
+}
+.sort-button:hover {
+    background-color: #ddd;
+    color: black;
+  }
+.algo-button {
+    background-color: rgb(0, 255, 0);
+    color: black;
+    border: 1px solid black;
+    padding: 30px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: not-allowed;
+  }
+.button-container {
+    background-color: rgb(0, 0, 0) ; /* Green */
+    color: rgb(255, 255, 255) ;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 15px 0px;
+    display: inline-flexbox;
+ 
+}
+.button-container2 {
+    background-color: rgb(0, 0, 0) ; /* Green */
+    color: rgb(255, 255, 255) ;
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    padding: 0px 15px;
+    margin:20px 0px;
+    position: absolute;
+    top: 0px;
+    display: inline-block;
+ 
+}
+.title {
+    background-color: rgb(0, 0, 0) ; /* Green */
+    color: rgb(255, 255, 255) ;
+    font-size: 30px;
+    position: center;
+    display: inline-block; 
+    
+}
+.divider {
+   
+    margin: 0px 20px;
+    width: 3px ;
+    height: 40px ;
+    background-color: black;
+    padding: 0px 0px ;
+    position: relative;
+    left: 10px;
+    display: inline-block; 
+    
+}
+.divider2 {
+   
+    margin: 0px 20px;
+    width: 3px ;
+    height: 40px ;
+    background-color: black;
+    padding: 0px 0px ;
+    position: relative;
+ 
+    display: inline-block; 
+    
+}
+.array-node {
+    background-color: #0052f5; 
+    color: aqua;
+    width: 5px;
+    display: inline-block ;
+    margin: 0px 1px;
+    bottom: 0px;
+}
