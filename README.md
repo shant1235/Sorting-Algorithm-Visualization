@@ -7,7 +7,8 @@ View this project at [Sorting Algorithm Visualization](https://shant1235.github.
 The Sorting Algorithm Visualizer is a Web app created with React,Javascript,CSS and HTML to display a range of popular sorting algorithms in real time. The current version of the app contains 4 sorting algorithms which are Quicksort, Heapsort, MergeSort and Bubble Sort. The app uses an array filled with random integer values ranging from 0 - 850 and can have a max size between 5 - 200. The Visualizer also has 3 different speeds at which to sort at and the sizes of each integer bar will resize with the appropriate choosen size of the array.
 
 ## Usage 
-1. Open up [Sorting Algorithm Visualization](https://shant1235.github.io/2Sorting-Algorithm-Visualization/)
+1. Open up [Sorting Algorithm Visualization](https://shant1235.github.io/Sorting-Algorithm-Visualization/)
+
 2. Get started by choosing a array size using the slider
 3. Choose which sorting algorithm would you like to see from the 4 options 
 4. Click "Sort Array" to view the array being sorted
